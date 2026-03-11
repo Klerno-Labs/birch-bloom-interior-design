@@ -1,24 +1,42 @@
 "use client";
+
 import { useEffect, useState } from "react";
 
 const CustomCursor = () => {
-  const [cursorStyle, setCursorStyle] = useState({ left: 0, top: 0 });
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setCursorStyle({ left: e.clientX, top: e.clientY });
+    const addEventListeners = () => {
+      document.addEventListener("mousemove", onMouseMove);
+      const targets = document.querySelectorAll("a, button, input, textarea");
+      targets.forEach((el) => {
+        el.addEventListener("mouseenter", () => setIsHovered(true));
+        el.addEventListener("mouseleave", () => setIsHovered(false));
+      });
     };
 
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
+    const removeEventListeners = () => {
+      document.removeEventListener("mousemove", onMouseMove);
+      const targets = document.querySelectorAll("a, button, input, textarea");
+      targets.forEach((el) => {
+        el.removeEventListener("mouseenter", () => setIsHovered(true));
+        el.removeEventListener("mouseleave", () => setIsHovered(false));
+      });
     };
+
+    const onMouseMove = (e: MouseEvent) => {
+      setPosition({ x: e.clientX, y: e.clientY });
+    };
+
+    addEventListeners();
+    return () => removeEventListeners();
   }, []);
 
   return (
     <div
-      className="fixed pointer-events-none w-8 h-8 bg-black rounded-full transform -translate-x-1/2 -translate-y-1/2"
-      style={{ left: cursorStyle.left, top: cursorStyle.top }}
+      className={`custom-cursor ${isHovered ? "hovered" : ""}`}
+      style={{ left: `${position.x}px`, top: `${position.y}px` }}
     />
   );
 };

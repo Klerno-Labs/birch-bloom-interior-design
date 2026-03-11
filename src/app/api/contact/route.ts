@@ -1,44 +1,34 @@
-import { NextResponse } from 'next/server';
+import { NextResponse } from "next/server";
 
-export async function POST(req: Request) {
+export async function POST(request: Request) {
   try {
-    const formData = await req.formData();
+    const body = await request.json();
     
-    // Honeypot check for spam prevention
-    const honeypot = formData.get('_gotcha');
-    if (honeypot) {
-      // If honeypot is filled, it's a bot. Return success silently to not alert them.
-      return NextResponse.json({ success: true }, { status: 200 });
-    }
-
-    const name = formData.get('name') as string;
-    const email = formData.get('email') as string;
-    const phone = formData.get('phone') as string;
-    const service = formData.get('service') as string;
-    const message = formData.get('message') as string;
-
     // Basic validation
-    if (!name || !email || !message) {
+    if (!body.name || !body.email || !body.message) {
       return NextResponse.json(
-        { error: 'Missing required fields' },
+        { error: "Missing required fields" },
         { status: 400 }
       );
     }
 
-    // Here you would integrate with an email service (Resend, SendGrid, Nodemailer)
-    // console.log({ name, email, phone, service, message });
+    // Honeypot check
+    if (body._gotcha) {
+      // Return success to fool bots, but don't actually send
+      return NextResponse.json({ success: true });
+    }
 
-    // Simulate API delay
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    // In a real static export without a backend server, 
+    // we can't send emails directly. 
+    // You would integrate with Resend, SendGrid, or Formspree here.
+    // For this demo, we simulate a successful response after a delay.
+    
+    // console.log("Form submission received:", body);
 
-    return NextResponse.json(
-      { message: 'Message sent successfully' },
-      { status: 200 }
-    );
+    return NextResponse.json({ success: true });
   } catch (error) {
-    console.error('Contact form error:', error);
     return NextResponse.json(
-      { error: 'Internal Server Error' },
+      { error: "Internal Server Error" },
       { status: 500 }
     );
   }

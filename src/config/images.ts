@@ -4,105 +4,102 @@
 // 2. Replace the "src" URL with your own image URL
 // 3. Update the "alt" text to describe the new image
 // 4. Save — every component on the site updates automatically
-//
-// All components import from this file. This is the ONLY file you need
-// to edit to swap any image on the entire website.
 
 export const images = {
-  // Homepage hero banner — the first image visitors see
+  // Homepage hero banner — Interior, warm, natural light
   "hero": {
-    src: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=2000&auto=format&fit=crop",
-    alt: "Warm minimalist living room with beige sofa and natural light",
-    width: 2000,
-    height: 1333,
+    src: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=2600&auto=format&fit=crop",
+    alt: "Sunlit modern living room with beige furniture and natural wood accents",
+    width: 2600,
+    height: 1733,
   },
 
-  // Alternative hero image (used on inner pages or as fallback)
+  // Alternative hero / Nav background
   "hero-alt": {
-    src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2000&auto=format&fit=crop",
-    alt: "Modern open plan living and dining area",
-    width: 2000,
-    height: 1333,
+    src: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2600&auto=format&fit=crop",
+    alt: "Minimalist kitchen with warm stone tones",
+    width: 1200,
+    height: 800,
   },
 
-  // About page or About section on homepage
+  // About page or About section
   "about": {
-    src: "https://images.unsplash.com/photo-1580216643062-1c4482d32097?q=80&w=1200&auto=format&fit=crop",
-    alt: "Interior designer reviewing blueprints in studio",
+    src: "https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?q=80&w=2000&auto=format&fit=crop",
+    alt: "Interior designer reviewing fabric swatches in a sunlit studio",
     width: 1200,
     height: 1600,
   },
 
-  // First service card image (Full Home Design)
+  // First service card (Full Home Design)
   "service-1": {
-    src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop",
-    alt: "Elegant living room design with earth tones",
+    src: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=2600&auto=format&fit=crop",
+    alt: "Luxury living room renovation with architectural details",
     width: 1200,
     height: 800,
   },
 
-  // Second service card image (Room Refresh)
+  // Second service card (Room Refresh)
   "service-2": {
-    src: "https://images.unsplash.com/photo-1616137466211-f939a420be84?q=80&w=1200&auto=format&fit=crop",
-    alt: "Cozy bedroom corner with textured bedding",
+    src: "https://images.unsplash.com/photo-1616137466211-f939a420be84?q=80&w=2600&auto=format&fit=crop",
+    alt: "Cozy bedroom corner with curated decor and textiles",
     width: 1200,
     height: 800,
   },
 
-  // Third service card image (Consultation)
+  // Third service card (Design Consultation)
   "service-3": {
-    src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1200&auto=format&fit=crop",
-    alt: "Modern kitchen with stone countertops",
+    src: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=2600&auto=format&fit=crop",
+    alt: "Architectural floor plans and blueprints on a desk",
     width: 1200,
     height: 800,
   },
 
   // Gallery image 1
   "gallery-1": {
-    src: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1200&auto=format&fit=crop",
-    alt: "Beige interior design with archways",
+    src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2600&auto=format&fit=crop",
+    alt: "Modern dining room with dark table and warm lighting",
     width: 1200,
     height: 1600,
   },
 
   // Gallery image 2
   "gallery-2": {
-    src: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1200&auto=format&fit=crop",
-    alt: "Scandinavian style dining room",
+    src: "https://images.unsplash.com/photo-1615529182904-14819c35db37?q=80&w=2600&auto=format&fit=crop",
+    alt: "Contemporary bathroom with stone vanity and warm tones",
     width: 1200,
     height: 800,
   },
 
-  // Team member photo (Claire Whitfield)
+  // Team member photo
   "team-1": {
-    src: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop",
-    alt: "Portrait of Claire Whitfield",
+    src: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2000&auto=format&fit=crop",
+    alt: "Claire Whitfield, Principal Designer",
     width: 800,
     height: 1000,
   },
 
   // Gallery image 3
   "gallery-3": {
-    src: "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?q=80&w=1200&auto=format&fit=crop",
-    alt: "Minimalist home office setup",
+    src: "https://images.unsplash.com/photo-1600121848594-d8644e57abab?q=80&w=2600&auto=format&fit=crop",
+    alt: "Open concept living and kitchen space",
     width: 1200,
     height: 800,
   },
 
   // Call-to-action section background
   "cta": {
-    src: "https://images.unsplash.com/photo-1600566752355-35792bedcfea?q=80&w=2000&auto=format&fit=crop",
-    alt: "Sunlit living room with sheer curtains",
-    width: 2000,
-    height: 1200,
+    src: "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?q=80&w=2600&auto=format&fit=crop",
+    alt: "Elegant home office space",
+    width: 1600,
+    height: 900,
   },
 
-  // Testimonials section background or decoration
+  // Testimonials section background
   "testimonial-bg": {
-    src: "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?q=80&w=2000&auto=format&fit=crop",
-    alt: "Abstract interior texture background",
-    width: 2000,
-    height: 1333,
+    src: "https://images.unsplash.com/photo-1615873968403-89e068629265?q=80&w=2600&auto=format&fit=crop",
+    alt: "Soft texture of linen fabric",
+    width: 1600,
+    height: 900,
   },
 } as const;
 

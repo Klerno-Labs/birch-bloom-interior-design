@@ -1,17 +1,26 @@
-export function Marquee() {
-  const logos = [
-    { src: "https://via.placeholder.com/150", alt: "Logo 1" },
-    { src: "https://via.placeholder.com/150", alt: "Logo 2" },
-    { src: "https://via.placeholder.com/150", alt: "Logo 3" },
-  ];
+const logos = [
+  "Architectural Digest",
+  "Vogue Living",
+  "Southern Living",
+  "House Beautiful",
+  "Elle Decor",
+  "Dwell",
+  "Veranda",
+  "Interior Design"
+];
 
+const Marquee = () => {
   return (
-    <div className="overflow-hidden whitespace-nowrap">
-      <div className="flex animate-marquee">
-        {logos.map(logo => (
-          <img key={logo.alt} src={logo.src} alt={logo.alt} className="h-12 mx-4" />
+    <div className="bg-primary py-8 overflow-hidden">
+      <div className="flex whitespace-nowrap animate-marquee">
+        {[...logos, ...logos, ...logos].map((logo, idx) => (
+          <span key={idx} className="text-background/40 font-serif text-xl mx-8 uppercase tracking-widest">
+            {logo}
+          </span>
         ))}
       </div>
     </div>
   );
-}
+};
+
+export default Marquee;

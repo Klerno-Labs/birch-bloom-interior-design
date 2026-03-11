@@ -1,28 +1,40 @@
-import Image from 'next/image';
-import { cn } from '@/lib/utils';
+import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 interface ProjectCardProps {
   title: string;
   category: string;
-  imageSrc: string;
-  aspectRatio: 'landscape' | 'portrait';
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  className?: string;
 }
 
-export function ProjectCard({ title, category, imageSrc, aspectRatio }: ProjectCardProps) {
+const ProjectCard = ({ title, category, src, alt, width, height, className }: ProjectCardProps) => {
   return (
-    <div className={cn('relative overflow-hidden rounded-xl shadow-md group')}>
+    <div className={cn("relative group overflow-hidden rounded-lg cursor-pointer", className)}>
       <Image
-        src={imageSrc}
-        alt={title}
-        layout="responsive"
-        width={aspectRatio === 'landscape' ? 800 : 600}
-        height={aspectRatio === 'landscape' ? 600 : 800}
-        className="object-cover transition-transform duration-300 group-hover:scale-105"
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
       />
-      <div className="absolute inset-0 bg-black/30 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex flex-col justify-end p-4">
-        <h3 className="text-white text-lg font-bold">{title}</h3>
-        <p className="text-white">{category}</p>
+      <div className="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 md:p-8">
+        <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+          <span className="text-accent text-xs uppercase tracking-widest mb-2 block">
+            {category}
+          </span>
+          <h3 className="text-background font-serif text-2xl md:text-3xl flex items-center justify-between">
+            {title}
+            <ArrowUpRight className="w-6 h-6" />
+          </h3>
+        </div>
       </div>
     </div>
   );
-}
+};
+
+export default ProjectCard;

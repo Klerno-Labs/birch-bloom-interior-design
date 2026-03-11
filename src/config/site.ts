@@ -1,20 +1,16 @@
-export const metadataBase = new URL("https://birchandbloom.com");
-
 export const siteConfig = {
-  name: "Birch & Bloom Interior Design",
-  description: "Award-winning interior design studio specializing in residential transformations.",
+  name: "Birch & Bloom",
+  description: "Award-winning interior design studio specializing in residential transformations. Creating spaces that are beautiful, functional, and deeply personal.",
+  url: "https://birchandbloom.com",
   links: {
-    menu: [
-      { title: "Home", href: "/" },
-      { title: "Portfolio", href: "/portfolio" },
-      { title: "Services", href: "/services" },
-      { title: "About", href: "/about" },
-      { title: "Process", href: "/process" },
-      { title: "Contact", href: "/contact" },
-    ],
-    social: [
-      { title: "Instagram", href: "https://instagram.com/birchandbloom", icon: "instagram" },
-      { title: "LinkedIn", href: "https://linkedin.com/company/birchandbloom", icon: "linkedin" },
-    ],
+    twitter: "https://twitter.com",
+    instagram: "https://instagram.com",
+    linkedin: "https://linkedin.com",
   },
+  contact: {
+    address: "225 Design District Way, Nashville, TN 37203",
+    phone: "(555) 321-6543",
+    email: "hello@birchandbloom.com",
+    hours: "Mon-Fri 9am-5pm, Sat by Appointment"
+  }
 };
