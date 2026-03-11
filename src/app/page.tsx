@@ -21,7 +21,7 @@ export default function Home() {
           </p>
           <div className="w-16 h-px bg-accent mx-auto mb-8" />
           <p className="text-muted-foreground leading-relaxed text-lg">
-            At Birch & Bloom, we don't just fill rooms with furniture. We curate experiences. From the initial sketch to the final installation, our award-winning team works tirelessly to ensure that every detail speaks to your unique lifestyle and aesthetic.
+            At Birch & Bloom, we don&apos;t just fill rooms with furniture. We curate experiences. From the initial sketch to the final installation, our award-winning team works tirelessly to ensure that every detail speaks to your unique lifestyle and aesthetic.
           </p>
         </div>
       </SectionWrapper>
@@ -66,7 +66,7 @@ export default function Home() {
             Ready to transform your home?
           </h2>
           <p className="text-background/80 text-lg mb-10 max-w-2xl mx-auto">
-            Let's discuss how we can bring your vision to life. Schedule a consultation with our design team today.
+            Let&apos;s discuss how we can bring your vision to life. Schedule a consultation with our design team today.
           </p>
           <Button label="Book Consultation" href="/contact" variant="pill" icon />
         </div>

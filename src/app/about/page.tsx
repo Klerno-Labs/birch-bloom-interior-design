@@ -27,7 +27,7 @@ export default function About() {
                 Birch & Bloom was founded on a simple premise: your home should be the most honest reflection of who you are. We move beyond trends to find the enduring elements of style that resonate with your lifestyle.
               </p>
               <p>
-                Our approach is collaborative and deeply personal. We listen. We ask the hard questions. We immerse ourselves in your world. This allows us to design spaces that aren't just beautiful to look at, but joyous to live in.
+                Our approach is collaborative and deeply personal. We listen. We ask the hard questions. We immerse ourselves in your world. This allows us to design spaces that aren&apos;t just beautiful to look at, but joyous to live in.
               </p>
               <p>
                 Based in Nashville, our work has been featured in Architectural Digest, Southern Living, and Veranda, celebrating our commitment to organic textures, warm palettes, and functional design.

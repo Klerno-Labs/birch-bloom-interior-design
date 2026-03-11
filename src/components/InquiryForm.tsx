@@ -53,7 +53,7 @@ const InquiryForm: React.FC<InquiryFormProps> = ({ onSubmit }) => {
       <button type="submit" disabled={isSubmitting} className="w-full bg-[#2c2c2c] text-[#faf8f5] py-3 font-bold hover:bg-[#8b7355] transition-colors">
         {isSubmitting ? 'Sending...' : 'Send Message'}
       </button>
-      {isSuccess && <p className="text-green-600">Thank you! We'll be in touch within 24 hours.</p>}
+      {isSuccess && <p className="text-green-600">Thank you! We&apos;ll be in touch within 24 hours.</p>}
       {error && <p className="text-red-600">{error}</p>}
     </form>
   );
