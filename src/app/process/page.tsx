@@ -1,20 +1,20 @@
-import { SectionWrapper } from "@/components/ui/SectionWrapper";
-import { Timeline } from "@/components/sections/Timeline";
+import { Metadata } from "next";
+import Timeline from "@/components/sections/Timeline";
 
-export const metadata = {
-  title: "Our Process | Birch & Bloom Interior Design",
-  description: "Discover our unique design process that ensures a seamless experience.",
+export const metadata: Metadata = {
+  title: "Process | Birch & Bloom Interior Design",
+  description: "Discover our design process from consultation to completion.",
   openGraph: {
-    title: "Our Process | Birch & Bloom Interior Design",
-    description: "Discover our unique design process that ensures a seamless experience.",
+    title: "Process | Birch & Bloom Interior Design",
+    description: "Discover our design process from consultation to completion.",
   },
 };
 
-export default function ProcessPage() {
+export default function Process() {
   return (
-    <SectionWrapper>
-      <h1 className="text-4xl font-bold text-center mb-8">Our Design Process</h1>
+    <main>
+      <h1 className="text-center text-4xl font-bold mb-8">How We Work</h1>
       <Timeline />
-    </SectionWrapper>
+    </main>
   );
 }

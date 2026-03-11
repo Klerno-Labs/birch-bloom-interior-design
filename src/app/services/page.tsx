@@ -1,24 +1,24 @@
-import { ServiceList } from "@/components/sections/ServiceList";
-import { InvestmentCards } from "@/components/sections/InvestmentCards";
+import { Metadata } from "next";
+import InteractiveServiceList from "@/components/sections/ServiceList";
+import InvestmentCards from "@/components/sections/InvestmentCards";
 import { images } from "@/config/images";
-import { SectionWrapper } from "@/components/ui/SectionWrapper";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Services | Birch & Bloom Interior Design",
-  description: "Discover our range of interior design services tailored to your needs.",
+  description: "Discover our range of interior design services and pricing.",
   openGraph: {
     title: "Services | Birch & Bloom Interior Design",
-    description: "Discover our range of interior design services tailored to your needs.",
+    description: "Discover our range of interior design services and pricing.",
     images: [images.hero.src],
   },
 };
 
-export default function ServicesPage() {
+export default function Services() {
   return (
-    <SectionWrapper>
-      <h1 className="text-4xl font-bold text-center mb-8">Our Services</h1>
-      <ServiceList />
+    <main>
+      <h1 className="text-center text-4xl font-bold mb-8">Services & Expertise</h1>
+      <InteractiveServiceList />
       <InvestmentCards />
-    </SectionWrapper>
+    </main>
   );
 }

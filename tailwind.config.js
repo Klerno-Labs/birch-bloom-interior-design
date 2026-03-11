@@ -6,12 +6,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: 'var(--color-primary)',
-        secondary: 'var(--color-secondary)',
-        accent: 'var(--color-accent)',
-        background: 'var(--color-background)',
-        text: 'var(--color-text)',
-        muted: 'var(--color-muted)',
+        primary: "#2c2c2c",
+        secondary: "#8b7355",
+        accent: "#d4c5b2",
+        background: "#faf8f5",
+        text: "#2c2c2c",
+        muted: "#6b6b6b",
+      },
+      spacing: {
+        '18': '4.5rem',
       },
     },
   },

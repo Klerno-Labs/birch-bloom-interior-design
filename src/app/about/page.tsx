@@ -1,24 +1,26 @@
+import { Metadata } from "next";
 import { images } from "@/config/images";
-import { SectionWrapper } from "@/components/ui/SectionWrapper";
+import Marquee from "@/components/sections/Marquee";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "About | Birch & Bloom Interior Design",
-  description: "Learn more about our design philosophy and the team behind Birch & Bloom.",
+  description: "Learn more about our team and design philosophy.",
   openGraph: {
     title: "About | Birch & Bloom Interior Design",
-    description: "Learn more about our design philosophy and the team behind Birch & Bloom.",
+    description: "Learn more about our team and design philosophy.",
     images: [images.hero.src],
   },
 };
 
-export default function AboutPage() {
+export default function About() {
   return (
-    <SectionWrapper>
-      <h1 className="text-4xl font-bold text-center mb-8">About Us</h1>
-      <img src={images.about.src} alt={images.about.alt} className="rounded-xl mb-6" />
-      <p className="text-lg text-center">
-        At Birch & Bloom, we believe in creating spaces that tell your story. Our team of experienced designers is dedicated to transforming your home into a sanctuary that reflects your personal style.
+    <main>
+      <h1 className="text-center text-4xl font-bold mb-8">The Designer</h1>
+      <img src={images.about.src} alt="Business professionals in modern meeting room" className="w-full h-auto mb-8" />
+      <p className="text-center max-w-2xl mx-auto mb-12">
+        Claire Whitfield, Principal Designer, ASID certified, has over 14 years of experience and has been featured in Architectural Digest.
       </p>
-    </SectionWrapper>
+      <Marquee />
+    </main>
   );
 }

@@ -1,7 +1,4 @@
-"use client";
-import { images } from "@/config/images";
-
-export function InvestmentCards() {
+const InvestmentCards = () => {
   const investments = [
     { title: "Full Home Design", price: "From $15,000" },
     { title: "Room Refresh", price: "From $3,500" },
@@ -12,13 +9,18 @@ export function InvestmentCards() {
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {investments.map((investment) => (
-        <div key={investment.title} className="border rounded-lg p-4 bg-white shadow-md">
-          <h3 className="text-lg font-bold">{investment.title}</h3>
-          <p className="text-gray-900 font-semibold">{investment.price}</p>
-        </div>
-      ))}
-    </div>
+    <section className="py-16">
+      <h2 className="text-center text-3xl font-bold mb-8">Investment Tiers</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {investments.map((investment) => (
+          <div key={investment.title} className="border p-6 rounded-lg">
+            <h3 className="text-xl font-semibold">{investment.title}</h3>
+            <p className="text-lg">{investment.price}</p>
+          </div>
+        ))}
+      </div>
+    </section>
   );
-}
+};
+
+export default InvestmentCards;

@@ -3,34 +3,43 @@ import { useState } from "react";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 
-export function Navbar() {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
-        <div className="text-2xl font-bold">{siteConfig.name}</div>
-        <div className="hidden md:flex space-x-8">
-          {siteConfig.links.menu.map((link) => (
-            <a key={link.title} href={link.href} className="text-gray-900 hover:text-gray-600">
-              {link.title}
-            </a>
+      <div className="max-w-7xl mx-auto flex justify-between items-center h-20 px-4 sm:px-6 lg:px-8">
+        <Link href="/" className="text-xl font-bold">
+          {siteConfig.name}
+        </Link>
+        <div className="hidden md:flex space-x-4">
+          {siteConfig.navLinks.map((link) => (
+            <Link key={link.href} href={link.href} className="text-gray-800 hover:text-gray-600">
+              {link.label}
+            </Link>
           ))}
         </div>
-        <button onClick={() => setIsOpen(!isOpen)} aria-label={isOpen ? "Close menu" : "Open menu"} className="md:hidden">
-          {isOpen ? <X /> : <Menu />}
+        <button
+          className="md:hidden"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label={isOpen ? "Close menu" : "Open menu"}
+        >
+          {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
       {isOpen && (
-        <div className="fixed inset-0 bg-white z-40 flex flex-col items-center justify-center space-y-6 translate-x-0 transition-transform duration-300">
-          {siteConfig.links.menu.map((link) => (
-            <a key={link.title} href={link.href} className="text-gray-900 hover:text-gray-600">
-              {link.title}
-            </a>
+        <div className="md:hidden bg-white">
+          {siteConfig.navLinks.map((link) => (
+            <Link key={link.href} href={link.href} className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+              {link.label}
+            </Link>
           ))}
         </div>
       )}
     </nav>
   );
-}
+};
+
+export default Navbar;
