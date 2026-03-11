@@ -3,22 +3,5 @@
 @tailwind utilities;
 
 body {
-  font-family: 'Manrope', sans-serif;
-}
-
-h1, h2, h3, h4 {
-  font-family: 'Playfair Display', serif;
-}
-
-.cursor {
-  cursor: url('/path/to/cursor.png'), auto;
-}
-
-.animate-marquee {
-  animation: marquee 15s linear infinite;
-}
-
-@keyframes marquee {
-  0% { transform: translate(0); }
-  100% { transform: translate(-100%); }
+  font-size: 1rem; /* Ensure consistent body text size */
 }

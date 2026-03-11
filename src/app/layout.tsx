@@ -1,21 +1,25 @@
-```typescript
-import './globals.css';
-import { Inter } from 'next/font/google';
-import { Metadata } from 'next';
-
-const inter = Inter({ subsets: ['latin'], display: 'swap' });
+import { Metadata } from "next";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: 'Birch & Bloom Interior Design',
-  description: 'Transforming spaces into beautiful, functional, and personal environments.',
-  metadataBase: new URL('https://birchandbloom.com'),
+  title: "Birch & Bloom Interior Design",
+  description: "Award-winning interior design studio specializing in residential transformations.",
+  openGraph: {
+    title: "Birch & Bloom Interior Design",
+    description: "Award-winning interior design studio specializing in residential transformations.",
+    images: ["/images/hero.jpg"], // Use the hero image URL
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }
-```
