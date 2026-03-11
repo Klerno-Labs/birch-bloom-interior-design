@@ -1,26 +1,28 @@
-"use client";
-import { ReactNode } from 'react';
-import { cn } from '@/lib/utils';
-import './globals.css';
-import { Inter } from 'next/font/google';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
-
-const inter = Inter({ subsets: ['latin'], display: 'swap' });
+import { ReactNode } from "react";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
+import { SmoothScroll } from "@/components/layout/SmoothScroll";
+import "@/styles/globals.css";
 
 export const metadata = {
   title: "Birch & Bloom Interior Design",
   description: "Award-winning interior design studio specializing in residential transformations.",
-  metadataBase: new URL("https://example.com"),
+  openGraph: {
+    title: "Birch & Bloom Interior Design",
+    description: "Award-winning interior design studio specializing in residential transformations.",
+    images: ["/images/hero.jpg"],
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className={cn(inter.className)}>
-        <Navbar />
-        {children}
-        <Footer />
+      <body>
+        <SmoothScroll>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </SmoothScroll>
       </body>
     </html>
   );

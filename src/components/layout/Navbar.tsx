@@ -1,27 +1,33 @@
 "use client";
-import { siteConfig } from '@/config/site';
-import { cn } from '@/lib/utils';
-import Link from 'next/link';
-import { useState } from 'react';
-import { Menu } from 'lucide-react';
+import { useState } from "react";
+import { siteConfig } from "@/config/site";
+import { cn } from "@/lib/utils";
+import { Menu, X } from "lucide-react";
 
-export default function Navbar() {
+export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className={cn("fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-100")}>
-      <div className="flex justify-between items-center h-20 px-4">
-        <Link href="/" className="text-xl font-bold">{siteConfig.name}</Link>
-        <button aria-label="Open menu" onClick={() => setIsOpen(!isOpen)}>
-          <Menu />
+    <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-100">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
+        <div className="text-2xl font-bold">{siteConfig.name}</div>
+        <div className="hidden md:flex space-x-8">
+          {siteConfig.links.menu.map((link) => (
+            <a key={link.title} href={link.href} className="text-gray-900 hover:text-gray-600">
+              {link.title}
+            </a>
+          ))}
+        </div>
+        <button onClick={() => setIsOpen(!isOpen)} aria-label={isOpen ? "Close menu" : "Open menu"} className="md:hidden">
+          {isOpen ? <X /> : <Menu />}
         </button>
       </div>
       {isOpen && (
-        <div className="flex flex-col items-center">
-          {siteConfig.navLinks.map(link => (
-            <Link key={link.href} href={link.href} className="py-2" onClick={() => setIsOpen(false)}>
-              {link.label}
-            </Link>
+        <div className="fixed inset-0 bg-white z-40 flex flex-col items-center justify-center space-y-6 translate-x-0 transition-transform duration-300">
+          {siteConfig.links.menu.map((link) => (
+            <a key={link.title} href={link.href} className="text-gray-900 hover:text-gray-600">
+              {link.title}
+            </a>
           ))}
         </div>
       )}
