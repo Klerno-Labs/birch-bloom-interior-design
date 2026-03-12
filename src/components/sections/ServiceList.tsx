@@ -58,7 +58,7 @@ const ServiceList = () => {
                 key={service.id}
                 onMouseEnter={() => setHoveredId(service.id)}
                 className={cn(
-                  &quot;border-b border-accent/50 py-8 cursor-pointer group transition-colors duration-300",
+                  "border-b border-accent/50 py-8 cursor-pointer group transition-colors duration-300",
                   hoveredId === service.id ? "bg-accent/10 -mx-4 px-4" : ""
                 )}
               >

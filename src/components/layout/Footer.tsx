@@ -31,7 +31,7 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <button onClick={() => window.scrollTo(0, 0)} className="mt-4&quot;>Back to Top</button>
+      <button onClick={() => window.scrollTo(0, 0)} className="mt-4">Back to Top</button>
       <p className="text-center text-sm">© {new Date().getFullYear()} Birch & Bloom. All rights reserved.</p>
     </footer>
   );

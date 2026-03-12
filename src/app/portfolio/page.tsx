@@ -8,7 +8,7 @@ export default function PortfolioPage() {
         {/* Example project cards */}
         <div className="border rounded-lg overflow-hidden">
           <img src={images["gallery-1"].src} alt={images["gallery-1"].alt} className="w-full h-48 object-cover" />
-          <h2 className="text-lg font-semibold">{images[&quot;gallery-1"].alt}</h2>
+          <h2 className="text-lg font-semibold">{images["gallery-1"].alt}</h2>
         </div>
         {/* Add more project cards as needed */}
       </div>
