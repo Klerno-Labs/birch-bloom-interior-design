@@ -1,4 +1,3 @@
-```typescript
 import { images } from '@/config/images';
 
 export default function HomePage() {
@@ -17,4 +16,3 @@ export default function HomePage() {
     </main>
   );
 }
-```
