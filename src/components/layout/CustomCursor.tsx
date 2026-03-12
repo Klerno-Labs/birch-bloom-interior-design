@@ -8,7 +8,7 @@ const CustomCursor = () => {
 
   useEffect(() => {
     const addEventListeners = () => {
-      document.addEventListener("mousemove", onMouseMove);
+      document.addEventListener(&quot;mousemove", onMouseMove);
       const targets = document.querySelectorAll("a, button, input, textarea");
       targets.forEach((el) => {
         el.addEventListener("mouseenter", () => setIsHovered(true));

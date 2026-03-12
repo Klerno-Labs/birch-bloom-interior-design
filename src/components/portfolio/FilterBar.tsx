@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 const categories = ["All", "Residential", "Commercial", "Refresh"];
 
 const FilterBar = () => {
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [activeCategory, setActiveCategory] = useState(&quot;All");
 
   return (
     <div className="sticky top-20 z-30 bg-background/90 backdrop-blur-md border-b border-accent/50 py-4 mb-12">
@@ -16,7 +16,7 @@ const FilterBar = () => {
             key={cat}
             onClick={() => setActiveCategory(cat)}
             className={cn(
-              "px-6 py-2 rounded-full text-sm uppercase tracking-widest transition-all duration-300",
+              &quot;px-6 py-2 rounded-full text-sm uppercase tracking-widest transition-all duration-300",
               activeCategory === cat
                 ? "bg-primary text-background shadow-md"
                 : "bg-transparent text-primary hover:bg-accent/50"

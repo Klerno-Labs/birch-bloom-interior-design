@@ -7,7 +7,7 @@ import Button from "@/components/ui/Button";
 
 const Hero = () => {
   const scrollToContent = () => {
-    window.scrollBy({ top: window.innerHeight, behavior: "smooth" });
+    window.scrollBy({ top: window.innerHeight, behavior: &quot;smooth" });
   };
 
   return (

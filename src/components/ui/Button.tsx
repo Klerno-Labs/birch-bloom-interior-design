@@ -11,7 +11,7 @@ interface ButtonProps {
   onClick?: () => void;
   icon?: boolean;
   className?: string;
-  type?: "button" | "submit" | "reset";
+  type?: &quot;button" | "submit" | "reset";
 }
 
 const Button = ({

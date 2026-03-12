@@ -4,17 +4,17 @@ import { cn } from "@/lib/utils";
 const steps = [
   {
     icon: <Compass className="w-8 h-8" />,
-    title: "Consult",
+    title: &quot;Consult",
     desc: "We begin with a deep dive into your lifestyle, vision, and the unique potential of your space.",
   },
   {
     icon: <Ruler className="w-8 h-8" />,
-    title: "Design",
+    title: &quot;Design",
     desc: "Concepts come to life through moodboards, floor plans, and curated material selections.",
   },
   {
     icon: <Hammer className="w-8 h-8" />,
-    title: "Build",
+    title: &quot;Build",
     desc: "Our team manages every detail of installation and renovation to bring the design to fruition.",
   },
 ];

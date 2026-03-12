@@ -20,7 +20,7 @@ export default function ContactForm() {
     if (honeypotValue) return; // Bot detected
     setIsSubmitting(true);
     try {
-      const res = await fetch("/api/contact", { method: "POST", body: JSON.stringify(formData) });
+      const res = await fetch(&quot;/api/contact", { method: "POST", body: JSON.stringify(formData) });
       if (res.ok) setIsSuccess(true);
       else setError("Something went wrong. Please try again.");
     } catch {
@@ -69,7 +69,7 @@ export default function ContactForm() {
         />
       </div>
       <button type="submit" disabled={isSubmitting} className="w-full bg-[#2c2c2c] text-[#faf8f5] py-2 rounded-lg">
-        {isSubmitting ? "Sending..." : "Send Message"}
+        {isSubmitting ? &quot;Sending..." : "Send Message"}
       </button>
       {isSuccess && <p className="text-green-500">Thank you! We&apos;ll be in touch within 24 hours.</p>}
       {error && <p className="text-red-500">{error}</p>}

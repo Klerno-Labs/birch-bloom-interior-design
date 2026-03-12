@@ -15,7 +15,7 @@ const SectionWrapper = ({
   className,
 }: SectionWrapperProps) => {
   const backgrounds = {
-    alabaster: "bg-background",
+    alabaster: &quot;bg-background",
     white: "bg-surface",
     sand: "bg-accent/30",
   };
