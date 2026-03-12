@@ -25,82 +25,11 @@
   --radius: 0.5rem;
 }
 
-
-:root {
-  --foreground-rgb: 44, 44, 44;
-  --background-start-rgb: 250, 248, 245;
-  --background-end-rgb: 250, 248, 245;
+* {
+  border-color: var(--border);
 }
 
-@layer base {
-  * {
-    @apply border-[hsl(var(--border))];
-  }
-  
-  body {
-    /* /* removed problematic @apply */ */
-    background-/* removed hsl var */
-    color: rgb(var(--foreground-rgb));
-    background: linear-gradient(
-        to bottom,
-        transparent,
-        rgb(var(--background-end-rgb))
-      )
-      rgb(var(--background-start-rgb));
-  }
-
-  /* Smooth Scrolling */
-  html {
-    scroll-behavior: smooth;
-  }
-}
-
-/* Custom Cursor */
-.custom-cursor {
-  width: 20px;
-  height: 20px;
-  border: 1px solid #2c2c2c;
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  transition: width 0.3s, height 0.3s, background-color 0.3s;
-  mix-blend-mode: difference;
-}
-
-.custom-cursor.hovered {
-  width: 50px;
-  height: 50px;
-  background-color: #faf8f5;
-  border-color: #faf8f5;
-}
-
-@media (max-width: 768px) {
-  .custom-cursor {
-    display: none;
-  }
-}
-
-/* Scrollbar Hide Utilities */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-/* Paper Grain Texture */
-.texture-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 9998;
-  opacity: 0.03;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+body {
+  background-color: var(--background);
+  color: var(--foreground);
 }
