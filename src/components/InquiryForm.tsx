@@ -1,6 +1,6 @@
 "use client";
 
-```typescript
+
 import React, { useState } from 'react';
 
 interface InquiryFormProps {
@@ -62,4 +62,3 @@ const InquiryForm: React.FC<InquiryFormProps> = ({ onSubmit }) => {
 };
 
 export default InquiryForm;
-```
