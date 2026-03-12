@@ -1,6 +1,5 @@
 "use client";
 
-```typescript
 import React from 'react';
 import { cn } from '../utils/cn';
 
@@ -36,4 +35,3 @@ const Button: React.FC<ButtonProps> = ({ variant, label, href, onClick, icon }) 
 };
 
 export default Button;
-```

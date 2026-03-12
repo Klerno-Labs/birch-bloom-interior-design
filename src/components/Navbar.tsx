@@ -1,6 +1,5 @@
 "use client";
 
-```typescript
 import React from 'react';
 import { cn } from '../utils/cn';
 import Button from './Button';
@@ -34,4 +33,3 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled, isMobileMenuOpen, onMenuTog
 };
 
 export default Navbar;
-```

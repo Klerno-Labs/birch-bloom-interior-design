@@ -3,7 +3,7 @@ import { images } from '@/config/images';
 export default function HomePage() {
   return (
     <main>
-      <section className="min-h-[80vh] bg-cover bg-center" style={{ backgroundImage: `url(${images.hero.src})` }}>
+      <section className="min-h-[80vh] bg-cover bg-center" style={{ backgroundImage: `url(${(images?.hero?.src ?? "/placeholder.jpg")})` }}>
         <div className="bg-gradient-to-t from-black/60 to-transparent h-full flex items-end p-8">
           <h1 className="text-6xl font-bold text-[#faf8f5]">Spaces That Tell Your Story</h1>
         </div>

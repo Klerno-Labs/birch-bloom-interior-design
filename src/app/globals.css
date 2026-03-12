@@ -14,7 +14,8 @@
   }
   
   body {
-    @apply bg-background text-primary font-sans antialiased;
+    /* @apply bg-background text-primary font-sans antialiased; */
+    background-color: hsl(var(--background));
     color: rgb(var(--foreground-rgb));
     background: linear-gradient(
         to bottom,
